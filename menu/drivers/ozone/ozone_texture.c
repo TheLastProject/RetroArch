@@ -210,6 +210,9 @@ uintptr_t ozone_entries_icon_get_texture(ozone_handle_t *ozone,
       case MENU_ENUM_LABEL_START_NET_RETROPAD:
             return ozone->icons_textures[OZONE_ENTRIES_ICONS_TEXTURE_INPUT_SETTINGS];
       case MENU_ENUM_LABEL_LATENCY_SETTINGS:
+#ifdef HAVE_LAKKA
+      case MENU_ENUM_LABEL_TIMEZONE_SETTINGS:
+#endif
             return ozone->icons_textures[OZONE_ENTRIES_ICONS_TEXTURE_LATENCY];
       case MENU_ENUM_LABEL_SAVING_SETTINGS:
       case MENU_ENUM_LABEL_SAVE_CURRENT_CONFIG:

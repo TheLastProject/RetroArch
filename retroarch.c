@@ -31755,6 +31755,26 @@ struct string_list* video_driver_get_gpu_api_devices(enum gfx_ctx_api api)
    return NULL;
 }
 
+#ifdef HAVE_LAKKA
+char* timezone_load_settings(void)
+{
+   FILE *fileStream;
+   char timezone[64];
+   fileStream = fopen("/storage/.cache/timezone", "r");
+   fgets(timezone, 64, fileStream);
+   fclose(fileStream);
+
+   return timezone;
+}
+
+void timezone_save_settings(char *timezone)
+{
+   FILE *fileStream;
+   fileStream = fopen("/storage/.cache/timezone", "w");
+   fputs(&timezone, fileStream);
+   fclose(fileStream);
+}
+#endif
 
 /* LOCATION */
 

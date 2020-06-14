@@ -192,6 +192,9 @@ DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_input_settings_list,           MENU_
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_input_menu_settings_list,           MENU_ENUM_SUBLABEL_INPUT_MENU_SETTINGS)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_input_haptic_feedback_settings_list,           MENU_ENUM_SUBLABEL_INPUT_HAPTIC_FEEDBACK_SETTINGS)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_latency_settings_list,         MENU_ENUM_SUBLABEL_LATENCY_SETTINGS)
+#ifdef HAVE_LAKKA
+DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_timezone_settings_list,        MENU_ENUM_SUBLABEL_TIMEZONE_SETTINGS)
+#endif
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_wifi_settings_list,            MENU_ENUM_SUBLABEL_WIFI_SETTINGS)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_netplay_lan_scan_settings_list,MENU_ENUM_SUBLABEL_NETPLAY_LAN_SCAN_SETTINGS)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_help_list,                     MENU_ENUM_SUBLABEL_HELP_LIST)
@@ -621,6 +624,9 @@ DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_settings_show_video,                
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_settings_show_audio,                   MENU_ENUM_SUBLABEL_SETTINGS_SHOW_AUDIO)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_settings_show_input,                   MENU_ENUM_SUBLABEL_SETTINGS_SHOW_INPUT)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_settings_show_latency,                 MENU_ENUM_SUBLABEL_SETTINGS_SHOW_LATENCY)
+#if HAVE_LAKKA
+DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_settings_show_timezone,                MENU_ENUM_SUBLABEL_SETTINGS_SHOW_TIMEZONE)
+#endif
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_settings_show_core,                    MENU_ENUM_SUBLABEL_SETTINGS_SHOW_CORE)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_settings_show_configuration,           MENU_ENUM_SUBLABEL_SETTINGS_SHOW_CONFIGURATION)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_settings_show_saving,                  MENU_ENUM_SUBLABEL_SETTINGS_SHOW_SAVING)
@@ -657,6 +663,9 @@ DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_content_show_video_layout,          
 #endif
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_content_show_rewind,                   MENU_ENUM_SUBLABEL_CONTENT_SHOW_REWIND)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_content_show_latency,                  MENU_ENUM_SUBLABEL_CONTENT_SHOW_LATENCY)
+#ifdef HAVE_LAKKA
+DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_content_show_timezone,                 MENU_ENUM_SUBLABEL_CONTENT_SHOW_TIMEZONE)
+#endif
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_quick_menu_show_save_core_overrides,   MENU_ENUM_SUBLABEL_QUICK_MENU_SHOW_SAVE_CORE_OVERRIDES)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_quick_menu_show_save_game_overrides,   MENU_ENUM_SUBLABEL_QUICK_MENU_SHOW_SAVE_GAME_OVERRIDES)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_quick_menu_show_information,           MENU_ENUM_SUBLABEL_QUICK_MENU_SHOW_INFORMATION)
@@ -1871,6 +1880,11 @@ int menu_cbs_init_bind_sublabel(menu_file_list_cbs_t *cbs,
          case MENU_ENUM_LABEL_SETTINGS_SHOW_LATENCY:
             BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_settings_show_latency);
             break;
+#ifdef HAVE_LAKKA
+         case MENU_ENUM_LABEL_SETTINGS_SHOW_TIMEZONE:
+            BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_settings_show_timezone);
+            break;
+#endif
          case MENU_ENUM_LABEL_SETTINGS_SHOW_CORE:
             BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_settings_show_core);
             break;
@@ -1970,6 +1984,11 @@ int menu_cbs_init_bind_sublabel(menu_file_list_cbs_t *cbs,
          case MENU_ENUM_LABEL_CONTENT_SHOW_LATENCY:
             BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_content_show_latency);
             break;
+#ifdef HAVE_LAKKA
+         case MENU_ENUM_LABEL_CONTENT_SHOW_TIMEZONE:
+            BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_content_show_timezone);
+            break;
+#endif
          case MENU_ENUM_LABEL_CONTENT_SHOW_REWIND:
             BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_content_show_rewind);
             break;
@@ -3218,6 +3237,11 @@ int menu_cbs_init_bind_sublabel(menu_file_list_cbs_t *cbs,
             break;
          case MENU_ENUM_LABEL_LATENCY_SETTINGS:
             BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_latency_settings_list);
+            break;
+         case MENU_ENUM_LABEL_TIMEZONE_SETTINGS:
+#ifdef HAVE_LAKKA
+            BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_timezone_settings_list);
+#endif
             break;
          case MENU_ENUM_LABEL_RECORDING_SETTINGS:
             BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_recording_settings_list);

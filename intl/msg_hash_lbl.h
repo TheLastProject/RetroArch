@@ -808,6 +808,12 @@ MSG_HASH(
    MENU_ENUM_LABEL_DEFERRED_LATENCY_SETTINGS_LIST,
    "deferred_latency_settings_list"
    )
+#ifdef HAVE_LAKKA
+MSG_HASH(
+   MENU_ENUM_LABEL_DEFERRED_TIMEZONE_SETTINGS_LIST,
+   "deferred_timezone_settings_list"
+   )
+#endif
 MSG_HASH(
    MENU_ENUM_LABEL_DEFERRED_AI_SERVICE_SETTINGS_LIST,
    "deferred_ai_service_settings_list"
@@ -1390,6 +1396,12 @@ MSG_HASH(
    MENU_ENUM_LABEL_LATENCY_SETTINGS,
    "latency_settings"
    )
+#ifdef HAVE_LAKKA
+MSG_HASH(
+   MENU_ENUM_LABEL_TIMEZONE_SETTINGS,
+   "timezone_settings"
+   )
+#endif
 MSG_HASH(
    MENU_ENUM_LABEL_INPUT_SMALL_KEYBOARD_ENABLE,
    "input_small_keyboard_enable"
@@ -3831,6 +3843,10 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_LABEL_CONTENT_SHOW_LATENCY,
    "menu_show_latency_settings"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_CONTENT_SHOW_TIMEZONE,
+   "menu_show_timezone_settings"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_CONTENT_SHOW_OVERLAYS,

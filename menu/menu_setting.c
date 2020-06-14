@@ -8146,6 +8146,16 @@ static bool setting_append_list(
                parent_group);
          SETTINGS_DATA_LIST_CURRENT_ADD_FLAGS(list, list_info, SD_FLAG_LAKKA_ADVANCED);
 
+#ifdef HAVE_LAKKA
+        CONFIG_ACTION(
+               list, list_info,
+               MENU_ENUM_LABEL_TIMEZONE_SETTINGS,
+               MENU_ENUM_LABEL_VALUE_TIMEZONE_SETTINGS,
+               &group_info,
+               &subgroup_info,
+               parent_group);
+#endif
+
          CONFIG_ACTION(
                list, list_info,
                MENU_ENUM_LABEL_CORE_SETTINGS,
@@ -13712,6 +13722,23 @@ static bool setting_append_list(
                   general_write_handler,
                   general_read_handler,
                   SD_FLAG_LAKKA_ADVANCED);
+
+#ifdef HAVE_LAKKA
+            CONFIG_BOOL(
+                  list, list_info,
+                  &settings->bools.menu_show_timezone,
+                  MENU_ENUM_LABEL_CONTENT_SHOW_TIMEZONE,
+                  MENU_ENUM_LABEL_VALUE_CONTENT_SHOW_TIMEZONE,
+                  true,
+                  MENU_ENUM_LABEL_VALUE_OFF,
+                  MENU_ENUM_LABEL_VALUE_ON,
+                  &group_info,
+                  &subgroup_info,
+                  parent_group,
+                  general_write_handler,
+                  general_read_handler,
+                  SD_FLAG_NONE);
+#endif
 
             CONFIG_BOOL(
                   list, list_info,

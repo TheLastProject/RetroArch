@@ -290,6 +290,10 @@ static enum msg_hash_enums action_ok_dl_to_enum(unsigned lbl)
          return MENU_ENUM_LABEL_DEFERRED_INPUT_HAPTIC_FEEDBACK_SETTINGS_LIST;
       case ACTION_OK_DL_LATENCY_SETTINGS_LIST:
          return MENU_ENUM_LABEL_DEFERRED_LATENCY_SETTINGS_LIST;
+#ifdef HAVE_LAKKA
+      case ACTION_OK_DL_TIMEZONE_SETTINGS_LIST:
+         return MENU_ENUM_LABEL_DEFERRED_TIMEZONE_SETTINGS_LIST;
+#endif
       case ACTION_OK_DL_DRIVER_SETTINGS_LIST:
          return MENU_ENUM_LABEL_DEFERRED_DRIVER_SETTINGS_LIST;
       case ACTION_OK_DL_CORE_SETTINGS_LIST:
@@ -1196,6 +1200,9 @@ int generic_action_ok_displaylist_push(const char *path,
       case ACTION_OK_DL_INPUT_MENU_SETTINGS_LIST:
       case ACTION_OK_DL_INPUT_HAPTIC_FEEDBACK_SETTINGS_LIST:
       case ACTION_OK_DL_LATENCY_SETTINGS_LIST:
+#ifdef HAVE_LAKKA
+      case ACTION_OK_DL_TIMEZONE_SETTINGS_LIST:
+#endif
       case ACTION_OK_DL_DRIVER_SETTINGS_LIST:
       case ACTION_OK_DL_CORE_SETTINGS_LIST:
       case ACTION_OK_DL_CORE_INFORMATION_LIST:
@@ -4966,6 +4973,9 @@ DEFAULT_ACTION_OK_FUNC(action_ok_push_input_settings_list, ACTION_OK_DL_INPUT_SE
 DEFAULT_ACTION_OK_FUNC(action_ok_push_input_menu_settings_list, ACTION_OK_DL_INPUT_MENU_SETTINGS_LIST)
 DEFAULT_ACTION_OK_FUNC(action_ok_push_input_haptic_feedback_settings_list, ACTION_OK_DL_INPUT_HAPTIC_FEEDBACK_SETTINGS_LIST)
 DEFAULT_ACTION_OK_FUNC(action_ok_push_latency_settings_list, ACTION_OK_DL_LATENCY_SETTINGS_LIST)
+#ifdef HAVE_LAKKA
+DEFAULT_ACTION_OK_FUNC(action_ok_push_timezone_settings_list, ACTION_OK_DL_TIMEZONE_SETTINGS_LIST)
+#endif
 DEFAULT_ACTION_OK_FUNC(action_ok_push_recording_settings_list, ACTION_OK_DL_RECORDING_SETTINGS_LIST)
 DEFAULT_ACTION_OK_FUNC(action_ok_push_playlist_settings_list, ACTION_OK_DL_PLAYLIST_SETTINGS_LIST)
 DEFAULT_ACTION_OK_FUNC(action_ok_push_playlist_manager_list, ACTION_OK_DL_PLAYLIST_MANAGER_LIST)
@@ -6708,6 +6718,9 @@ static int menu_cbs_init_bind_ok_compare_label(menu_file_list_cbs_t *cbs,
          {MENU_ENUM_LABEL_AUDIO_OUTPUT_SETTINGS,               action_ok_push_audio_output_settings_list},
          {MENU_ENUM_LABEL_AUDIO_RESAMPLER_SETTINGS,            action_ok_push_audio_resampler_settings_list},
          {MENU_ENUM_LABEL_LATENCY_SETTINGS,                    action_ok_push_latency_settings_list},
+#ifdef HAVE_LAKKA
+         {MENU_ENUM_LABEL_TIMEZONE_SETTINGS,                   action_ok_push_timezone_settings_list},
+#endif
          {MENU_ENUM_LABEL_CORE_SETTINGS,                       action_ok_push_core_settings_list},
          {MENU_ENUM_LABEL_CORE_INFORMATION,                    action_ok_push_core_information_list},
          {MENU_ENUM_LABEL_CORE_MANAGER_ENTRY,                  action_ok_push_core_information_list},

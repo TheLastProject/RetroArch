@@ -995,6 +995,14 @@ MSG_HASH(
    "Change settings related to video, audio and input latency."
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_TIMEZONE_SETTINGS,
+   "Timezone"
+   )
+MSG_HASH(
+   MENU_ENUM_SUBLABEL_TIMEZONE_SETTINGS,
+   "Change timezone settings."
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CORE_SETTINGS,
    "Core"
    )

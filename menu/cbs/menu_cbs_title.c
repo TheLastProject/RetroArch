@@ -507,6 +507,9 @@ DEFAULT_TITLE_MACRO(action_get_audio_mixer_settings_list,       MENU_ENUM_LABEL_
 #endif
 DEFAULT_TITLE_MACRO(action_get_input_settings_list,             MENU_ENUM_LABEL_VALUE_INPUT_SETTINGS)
 DEFAULT_TITLE_MACRO(action_get_latency_settings_list,           MENU_ENUM_LABEL_VALUE_LATENCY_SETTINGS)
+#ifdef HAVE_LAKKA
+DEFAULT_TITLE_MACRO(action_get_timezone_settings_list,          MENU_ENUM_LABEL_VALUE_TIMEZONE_SETTINGS)
+#endif
 DEFAULT_TITLE_MACRO(action_get_core_cheat_options_list,         MENU_ENUM_LABEL_VALUE_CORE_CHEAT_OPTIONS)
 DEFAULT_TITLE_MACRO(action_get_load_content_list,               MENU_ENUM_LABEL_VALUE_LOAD_CONTENT_LIST)
 DEFAULT_TITLE_MACRO(action_get_load_content_special,            MENU_ENUM_LABEL_VALUE_LOAD_CONTENT_SPECIAL)
@@ -811,6 +814,9 @@ static int menu_cbs_init_bind_title_compare_label(menu_file_list_cbs_t *cbs,
       {MENU_ENUM_LABEL_DEFERRED_AUDIO_MIXER_SETTINGS_LIST,            action_get_audio_mixer_settings_list},
 #endif
       {MENU_ENUM_LABEL_DEFERRED_LATENCY_SETTINGS_LIST,                action_get_latency_settings_list},
+#ifdef HAVE_LAKKA
+      {MENU_ENUM_LABEL_DEFERRED_TIMEZONE_SETTINGS_LIST,               action_get_timezone_settings_list},
+#endif
       {MENU_ENUM_LABEL_SYSTEM_INFORMATION,                            action_get_system_information_list},
       {MENU_ENUM_LABEL_DISC_INFORMATION,                              action_get_disc_information_list},
       {MENU_ENUM_LABEL_NETWORK_INFORMATION,                           action_get_network_information_list},

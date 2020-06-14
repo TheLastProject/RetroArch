@@ -313,6 +313,359 @@ enum midi_driver_enum
    MIDI_NULL
 };
 
+enum timezone_enum
+{
+   TIMEZONE_AFRICA_ABIDJAN  = MIDI_NULL + 1,
+   TIMEZONE_AFRICA_ACCRA,
+   TIMEZONE_AFRICA_ALGIERS,
+   TIMEZONE_AFRICA_BISSAU,
+   TIMEZONE_AFRICA_CAIRO,
+   TIMEZONE_AFRICA_CASABLANCA,
+   TIMEZONE_AFRICA_CEUTA,
+   TIMEZONE_AFRICA_EL_AAIUN,
+   TIMEZONE_AFRICA_JOHANNESBURG,
+   TIMEZONE_AFRICA_JUBA,
+   TIMEZONE_AFRICA_KHARTOUM,
+   TIMEZONE_AFRICA_LAGOS,
+   TIMEZONE_AFRICA_MAPUTO,
+   TIMEZONE_AFRICA_MONROVIA,
+   TIMEZONE_AFRICA_NAIROBI,
+   TIMEZONE_AFRICA_NDJAMENA,
+   TIMEZONE_AFRICA_SAO_TOME,
+   TIMEZONE_AFRICA_TRIPOLI,
+   TIMEZONE_AFRICA_TUNIS,
+   TIMEZONE_AFRICA_WINDHOEK,
+   TIMEZONE_AMERICA_ADAK,
+   TIMEZONE_AMERICA_ANCHORAGE,
+   TIMEZONE_AMERICA_ARAGUAINA,
+   TIMEZONE_AMERICA_ARGENTINA_BUENOS_AIRES,
+   TIMEZONE_AMERICA_ARGENTINA_CATAMARCA,
+   TIMEZONE_AMERICA_ARGENTINA_CORDOBA,
+   TIMEZONE_AMERICA_ARGENTINA_JUJUY,
+   TIMEZONE_AMERICA_ARGENTINA_LA_RIOJA,
+   TIMEZONE_AMERICA_ARGENTINA_MENDOZA,
+   TIMEZONE_AMERICA_ARGENTINA_RIO_GALLEGOS,
+   TIMEZONE_AMERICA_ARGENTINA_SALTA,
+   TIMEZONE_AMERICA_ARGENTINA_SAN_JUAN,
+   TIMEZONE_AMERICA_ARGENTINA_SAN_LUIS,
+   TIMEZONE_AMERICA_ARGENTINA_TUCUMAN,
+   TIMEZONE_AMERICA_ARGENTINA_USHUAIA,
+   TIMEZONE_AMERICA_ASUNCION,
+   TIMEZONE_AMERICA_ATIKOKAN,
+   TIMEZONE_AMERICA_BAHIA,
+   TIMEZONE_AMERICA_BAHIA_BANDERAS,
+   TIMEZONE_AMERICA_BARBADOS,
+   TIMEZONE_AMERICA_BELEM,
+   TIMEZONE_AMERICA_BELIZE,
+   TIMEZONE_AMERICA_BLANC_SABLON,
+   TIMEZONE_AMERICA_BOA_VISTA,
+   TIMEZONE_AMERICA_BOGOTA,
+   TIMEZONE_AMERICA_BOISE,
+   TIMEZONE_AMERICA_CAMBRIDGE_BAY,
+   TIMEZONE_AMERICA_CAMPO_GRANDE,
+   TIMEZONE_AMERICA_CANCUN,
+   TIMEZONE_AMERICA_CARACAS,
+   TIMEZONE_AMERICA_CAYENNE,
+   TIMEZONE_AMERICA_CHICAGO,
+   TIMEZONE_AMERICA_CHIHUAHUA,
+   TIMEZONE_AMERICA_COSTA_RICA,
+   TIMEZONE_AMERICA_CRESTON,
+   TIMEZONE_AMERICA_CUIABA,
+   TIMEZONE_AMERICA_CURACAO,
+   TIMEZONE_AMERICA_DANMARKSHAVN,
+   TIMEZONE_AMERICA_DAWSON,
+   TIMEZONE_AMERICA_DAWSON_CREEK,
+   TIMEZONE_AMERICA_DENVER,
+   TIMEZONE_AMERICA_DETROIT,
+   TIMEZONE_AMERICA_EDMONTON,
+   TIMEZONE_AMERICA_EIRUNEPE,
+   TIMEZONE_AMERICA_EL_SALVADOR,
+   TIMEZONE_AMERICA_FORT_NELSON,
+   TIMEZONE_AMERICA_FORTALEZA,
+   TIMEZONE_AMERICA_GLACE_BAY,
+   TIMEZONE_AMERICA_GOOSE_BAY,
+   TIMEZONE_AMERICA_GRAND_TURK,
+   TIMEZONE_AMERICA_GUATEMALA,
+   TIMEZONE_AMERICA_GUAYAQUIL,
+   TIMEZONE_AMERICA_GUYANA,
+   TIMEZONE_AMERICA_HALIFAX,
+   TIMEZONE_AMERICA_HAVANA,
+   TIMEZONE_AMERICA_HERMOSILLO,
+   TIMEZONE_AMERICA_INDIANA_INDIANAPOLIS,
+   TIMEZONE_AMERICA_INDIANA_KNOX,
+   TIMEZONE_AMERICA_INDIANA_MARENGO,
+   TIMEZONE_AMERICA_INDIANA_PETERSBURG,
+   TIMEZONE_AMERICA_INDIANA_TELL_CITY,
+   TIMEZONE_AMERICA_INDIANA_VEVAY,
+   TIMEZONE_AMERICA_INDIANA_VINCENNES,
+   TIMEZONE_AMERICA_INDIANA_WINAMAC,
+   TIMEZONE_AMERICA_INUVIK,
+   TIMEZONE_AMERICA_IQALUIT,
+   TIMEZONE_AMERICA_JAMAICA,
+   TIMEZONE_AMERICA_JUNEAU,
+   TIMEZONE_AMERICA_KENTUCKY_LOUISVILLE,
+   TIMEZONE_AMERICA_KENTUCKY_MONTICELLO,
+   TIMEZONE_AMERICA_LA_PAZ,
+   TIMEZONE_AMERICA_LIMA,
+   TIMEZONE_AMERICA_LOS_ANGELES,
+   TIMEZONE_AMERICA_MACEIO,
+   TIMEZONE_AMERICA_MANAGUA,
+   TIMEZONE_AMERICA_MANAUS,
+   TIMEZONE_AMERICA_MARTINIQUE,
+   TIMEZONE_AMERICA_MATAMOROS,
+   TIMEZONE_AMERICA_MAZATLAN,
+   TIMEZONE_AMERICA_MENOMINEE,
+   TIMEZONE_AMERICA_MERIDA,
+   TIMEZONE_AMERICA_METLAKATLA,
+   TIMEZONE_AMERICA_MEXICO_CITY,
+   TIMEZONE_AMERICA_MIQUELON,
+   TIMEZONE_AMERICA_MONCTON,
+   TIMEZONE_AMERICA_MONTERREY,
+   TIMEZONE_AMERICA_MONTEVIDEO,
+   TIMEZONE_AMERICA_NASSAU,
+   TIMEZONE_AMERICA_NEW_YORK,
+   TIMEZONE_AMERICA_NIPIGON,
+   TIMEZONE_AMERICA_NOME,
+   TIMEZONE_AMERICA_NORONHA,
+   TIMEZONE_AMERICA_NORTH_DAKOTA_BEULAH,
+   TIMEZONE_AMERICA_NORTH_DAKOTA_CENTER,
+   TIMEZONE_AMERICA_NORTH_DAKOTA_NEW_SALEM,
+   TIMEZONE_AMERICA_NUUK,
+   TIMEZONE_AMERICA_OJINAGA,
+   TIMEZONE_AMERICA_PANAMA,
+   TIMEZONE_AMERICA_PANGNIRTUNG,
+   TIMEZONE_AMERICA_PARAMARIBO,
+   TIMEZONE_AMERICA_PHOENIX,
+   TIMEZONE_AMERICA_PORT_AU_PRINCE,
+   TIMEZONE_AMERICA_PORT_OF_SPAIN,
+   TIMEZONE_AMERICA_PORTO_VELHO,
+   TIMEZONE_AMERICA_PUERTO_RICO,
+   TIMEZONE_AMERICA_PUNTA_ARENAS,
+   TIMEZONE_AMERICA_RAINY_RIVER,
+   TIMEZONE_AMERICA_RANKIN_INLET,
+   TIMEZONE_AMERICA_RECIFE,
+   TIMEZONE_AMERICA_REGINA,
+   TIMEZONE_AMERICA_RESOLUTE,
+   TIMEZONE_AMERICA_RIO_BRANCO,
+   TIMEZONE_AMERICA_SANTAREM,
+   TIMEZONE_AMERICA_SANTIAGO,
+   TIMEZONE_AMERICA_SANTO_DOMINGO,
+   TIMEZONE_AMERICA_SAO_PAULO,
+   TIMEZONE_AMERICA_SCORESBYSUND,
+   TIMEZONE_AMERICA_SITKA,
+   TIMEZONE_AMERICA_ST_JOHNS,
+   TIMEZONE_AMERICA_SWIFT_CURRENT,
+   TIMEZONE_AMERICA_TEGUCIGALPA,
+   TIMEZONE_AMERICA_THULE,
+   TIMEZONE_AMERICA_THUNDER_BAY,
+   TIMEZONE_AMERICA_TIJUANA,
+   TIMEZONE_AMERICA_TORONTO,
+   TIMEZONE_AMERICA_VANCOUVER,
+   TIMEZONE_AMERICA_WHITEHORSE,
+   TIMEZONE_AMERICA_WINNIPEG,
+   TIMEZONE_AMERICA_YAKUTAT,
+   TIMEZONE_AMERICA_YELLOWKNIFE,
+   TIMEZONE_ANTARCTICA_CASEY,
+   TIMEZONE_ANTARCTICA_DAVIS,
+   TIMEZONE_ANTARCTICA_DUMONTDURVILLE,
+   TIMEZONE_ANTARCTICA_MACQUARIE,
+   TIMEZONE_ANTARCTICA_MAWSON,
+   TIMEZONE_ANTARCTICA_PALMER,
+   TIMEZONE_ANTARCTICA_ROTHERA,
+   TIMEZONE_ANTARCTICA_SYOWA,
+   TIMEZONE_ANTARCTICA_TROLL,
+   TIMEZONE_ANTARCTICA_VOSTOK,
+   TIMEZONE_ASIA_ALMATY,
+   TIMEZONE_ASIA_AMMAN,
+   TIMEZONE_ASIA_ANADYR,
+   TIMEZONE_ASIA_AQTAU,
+   TIMEZONE_ASIA_AQTOBE,
+   TIMEZONE_ASIA_ASHGABAT,
+   TIMEZONE_ASIA_ATYRAU,
+   TIMEZONE_ASIA_BAGHDAD,
+   TIMEZONE_ASIA_BAKU,
+   TIMEZONE_ASIA_BANGKOK,
+   TIMEZONE_ASIA_BARNAUL,
+   TIMEZONE_ASIA_BEIRUT,
+   TIMEZONE_ASIA_BISHKEK,
+   TIMEZONE_ASIA_BRUNEI,
+   TIMEZONE_ASIA_CHITA,
+   TIMEZONE_ASIA_CHOIBALSAN,
+   TIMEZONE_ASIA_COLOMBO,
+   TIMEZONE_ASIA_DAMASCUS,
+   TIMEZONE_ASIA_DHAKA,
+   TIMEZONE_ASIA_DILI,
+   TIMEZONE_ASIA_DUBAI,
+   TIMEZONE_ASIA_DUSHANBE,
+   TIMEZONE_ASIA_FAMAGUSTA,
+   TIMEZONE_ASIA_GAZA,
+   TIMEZONE_ASIA_HEBRON,
+   TIMEZONE_ASIA_HO_CHI_MINH,
+   TIMEZONE_ASIA_HONG_KONG,
+   TIMEZONE_ASIA_HOVD,
+   TIMEZONE_ASIA_IRKUTSK,
+   TIMEZONE_ASIA_JAKARTA,
+   TIMEZONE_ASIA_JAYAPURA,
+   TIMEZONE_ASIA_JERUSALEM,
+   TIMEZONE_ASIA_KABUL,
+   TIMEZONE_ASIA_KAMCHATKA,
+   TIMEZONE_ASIA_KARACHI,
+   TIMEZONE_ASIA_KATHMANDU,
+   TIMEZONE_ASIA_KHANDYGA,
+   TIMEZONE_ASIA_KOLKATA,
+   TIMEZONE_ASIA_KRASNOYARSK,
+   TIMEZONE_ASIA_KUALA_LUMPUR,
+   TIMEZONE_ASIA_KUCHING,
+   TIMEZONE_ASIA_MACAU,
+   TIMEZONE_ASIA_MAGADAN,
+   TIMEZONE_ASIA_MAKASSAR,
+   TIMEZONE_ASIA_MANILA,
+   TIMEZONE_ASIA_NICOSIA,
+   TIMEZONE_ASIA_NOVOKUZNETSK,
+   TIMEZONE_ASIA_NOVOSIBIRSK,
+   TIMEZONE_ASIA_OMSK,
+   TIMEZONE_ASIA_ORAL,
+   TIMEZONE_ASIA_PONTIANAK,
+   TIMEZONE_ASIA_PYONGYANG,
+   TIMEZONE_ASIA_QATAR,
+   TIMEZONE_ASIA_QOSTANAY,
+   TIMEZONE_ASIA_QYZYLORDA,
+   TIMEZONE_ASIA_RIYADH,
+   TIMEZONE_ASIA_SAKHALIN,
+   TIMEZONE_ASIA_SAMARKAND,
+   TIMEZONE_ASIA_SEOUL,
+   TIMEZONE_ASIA_SHANGHAI,
+   TIMEZONE_ASIA_SINGAPORE,
+   TIMEZONE_ASIA_SREDNEKOLYMSK,
+   TIMEZONE_ASIA_TAIPEI,
+   TIMEZONE_ASIA_TASHKENT,
+   TIMEZONE_ASIA_TBILISI,
+   TIMEZONE_ASIA_TEHRAN,
+   TIMEZONE_ASIA_THIMPHU,
+   TIMEZONE_ASIA_TOKYO,
+   TIMEZONE_ASIA_TOMSK,
+   TIMEZONE_ASIA_ULAANBAATAR,
+   TIMEZONE_ASIA_URUMQI,
+   TIMEZONE_ASIA_UST_NERA,
+   TIMEZONE_ASIA_VLADIVOSTOK,
+   TIMEZONE_ASIA_YAKUTSK,
+   TIMEZONE_ASIA_YANGON,
+   TIMEZONE_ASIA_YEKATERINBURG,
+   TIMEZONE_ASIA_YEREVAN,
+   TIMEZONE_ATLANTIC_AZORES,
+   TIMEZONE_ATLANTIC_BERMUDA,
+   TIMEZONE_ATLANTIC_CANARY,
+   TIMEZONE_ATLANTIC_CAPE_VERDE,
+   TIMEZONE_ATLANTIC_FAROE,
+   TIMEZONE_ATLANTIC_MADEIRA,
+   TIMEZONE_ATLANTIC_REYKJAVIK,
+   TIMEZONE_ATLANTIC_SOUTH_GEORGIA,
+   TIMEZONE_ATLANTIC_STANLEY,
+   TIMEZONE_AUSTRALIA_ADELAIDE,
+   TIMEZONE_AUSTRALIA_BRISBANE,
+   TIMEZONE_AUSTRALIA_BROKEN_HILL,
+   TIMEZONE_AUSTRALIA_CURRIE,
+   TIMEZONE_AUSTRALIA_DARWIN,
+   TIMEZONE_AUSTRALIA_EUCLA,
+   TIMEZONE_AUSTRALIA_HOBART,
+   TIMEZONE_AUSTRALIA_LINDEMAN,
+   TIMEZONE_AUSTRALIA_LORD_HOWE,
+   TIMEZONE_AUSTRALIA_MELBOURNE,
+   TIMEZONE_AUSTRALIA_PERTH,
+   TIMEZONE_AUSTRALIA_SYDNEY,
+   TIMEZONE_EUROPE_AMSTERDAM,
+   TIMEZONE_EUROPE_ANDORRA,
+   TIMEZONE_EUROPE_ASTRAKHAN,
+   TIMEZONE_EUROPE_ATHENS,
+   TIMEZONE_EUROPE_BELGRADE,
+   TIMEZONE_EUROPE_BERLIN,
+   TIMEZONE_EUROPE_BRUSSELS,
+   TIMEZONE_EUROPE_BUCHAREST,
+   TIMEZONE_EUROPE_BUDAPEST,
+   TIMEZONE_EUROPE_CHISINAU,
+   TIMEZONE_EUROPE_COPENHAGEN,
+   TIMEZONE_EUROPE_DUBLIN,
+   TIMEZONE_EUROPE_GIBRALTAR,
+   TIMEZONE_EUROPE_HELSINKI,
+   TIMEZONE_EUROPE_ISTANBUL,
+   TIMEZONE_EUROPE_KALININGRAD,
+   TIMEZONE_EUROPE_KIEV,
+   TIMEZONE_EUROPE_KIROV,
+   TIMEZONE_EUROPE_LISBON,
+   TIMEZONE_EUROPE_LONDON,
+   TIMEZONE_EUROPE_LUXEMBOURG,
+   TIMEZONE_EUROPE_MADRID,
+   TIMEZONE_EUROPE_MALTA,
+   TIMEZONE_EUROPE_MINSK,
+   TIMEZONE_EUROPE_MONACO,
+   TIMEZONE_EUROPE_MOSCOW,
+   TIMEZONE_EUROPE_OSLO,
+   TIMEZONE_EUROPE_PARIS,
+   TIMEZONE_EUROPE_PRAGUE,
+   TIMEZONE_EUROPE_RIGA,
+   TIMEZONE_EUROPE_ROME,
+   TIMEZONE_EUROPE_SAMARA,
+   TIMEZONE_EUROPE_SARATOV,
+   TIMEZONE_EUROPE_SIMFEROPOL,
+   TIMEZONE_EUROPE_SOFIA,
+   TIMEZONE_EUROPE_STOCKHOLM,
+   TIMEZONE_EUROPE_TALLINN,
+   TIMEZONE_EUROPE_TIRANE,
+   TIMEZONE_EUROPE_ULYANOVSK,
+   TIMEZONE_EUROPE_UZHGOROD,
+   TIMEZONE_EUROPE_VIENNA,
+   TIMEZONE_EUROPE_VILNIUS,
+   TIMEZONE_EUROPE_VOLGOGRAD,
+   TIMEZONE_EUROPE_WARSAW,
+   TIMEZONE_EUROPE_ZAPOROZHYE,
+   TIMEZONE_EUROPE_ZURICH,
+   TIMEZONE_INDIAN_CHAGOS,
+   TIMEZONE_INDIAN_CHRISTMAS,
+   TIMEZONE_INDIAN_COCOS,
+   TIMEZONE_INDIAN_KERGUELEN,
+   TIMEZONE_INDIAN_MAHE,
+   TIMEZONE_INDIAN_MALDIVES,
+   TIMEZONE_INDIAN_MAURITIUS,
+   TIMEZONE_INDIAN_REUNION,
+   TIMEZONE_PACIFIC_APIA,
+   TIMEZONE_PACIFIC_AUCKLAND,
+   TIMEZONE_PACIFIC_BOUGAINVILLE,
+   TIMEZONE_PACIFIC_CHATHAM,
+   TIMEZONE_PACIFIC_CHUUK,
+   TIMEZONE_PACIFIC_EASTER,
+   TIMEZONE_PACIFIC_EFATE,
+   TIMEZONE_PACIFIC_ENDERBURY,
+   TIMEZONE_PACIFIC_FAKAOFO,
+   TIMEZONE_PACIFIC_FIJI,
+   TIMEZONE_PACIFIC_FUNAFUTI,
+   TIMEZONE_PACIFIC_GALAPAGOS,
+   TIMEZONE_PACIFIC_GAMBIER,
+   TIMEZONE_PACIFIC_GUADALCANAL,
+   TIMEZONE_PACIFIC_GUAM,
+   TIMEZONE_PACIFIC_HONOLULU,
+   TIMEZONE_PACIFIC_KIRITIMATI,
+   TIMEZONE_PACIFIC_KOSRAE,
+   TIMEZONE_PACIFIC_KWAJALEIN,
+   TIMEZONE_PACIFIC_MAJURO,
+   TIMEZONE_PACIFIC_MARQUESAS,
+   TIMEZONE_PACIFIC_NAURU,
+   TIMEZONE_PACIFIC_NIUE,
+   TIMEZONE_PACIFIC_NORFOLK,
+   TIMEZONE_PACIFIC_NOUMEA,
+   TIMEZONE_PACIFIC_PAGO_PAGO,
+   TIMEZONE_PACIFIC_PALAU,
+   TIMEZONE_PACIFIC_PITCAIRN,
+   TIMEZONE_PACIFIC_POHNPEI,
+   TIMEZONE_PACIFIC_PORT_MORESBY,
+   TIMEZONE_PACIFIC_RAROTONGA,
+   TIMEZONE_PACIFIC_TAHITI,
+   TIMEZONE_PACIFIC_TARAWA,
+   TIMEZONE_PACIFIC_TONGATAPU,
+   TIMEZONE_PACIFIC_WAKE,
+   TIMEZONE_PACIFIC_WALLIS,
+   TIMEZONE_UTC
+};
+
 #if defined(HAVE_METAL)
 static const enum video_driver_enum VIDEO_DEFAULT_DRIVER = VIDEO_METAL;
 #elif defined(HAVE_VITA2D)
@@ -757,6 +1110,724 @@ const char *config_get_default_audio_resampler(void)
 }
 
 /**
+ * config_get_default_timezone;
+ *
+ * Gets default timezone.
+ *
+ * Returns: Default timezone.
+ **/
+const char *config_get_default_timezone(void)
+{
+   /**
+   enum timezone_enum default_timezone = TIMEZONE_UTC;
+
+   switch (default_timezone)
+   {
+      case TIMEZONE_AFRICA_ABIDJAN:
+         return "Africa/Abidjan";
+      case TIMEZONE_AFRICA_ACCRA:
+         return "Africa/Accra";
+      case TIMEZONE_AFRICA_ALGIERS:
+         return "Africa/Algiers";
+      case TIMEZONE_AFRICA_BISSAU:
+         return "Africa/Bissau";
+      case TIMEZONE_AFRICA_CAIRO:
+         return "Africa/Cairo";
+      case TIMEZONE_AFRICA_CASABLANCA:
+         return "Africa/Casablanca";
+      case TIMEZONE_AFRICA_CEUTA:
+         return "Africa/Ceuta";
+      case TIMEZONE_AFRICA_EL_AAIUN:
+         return "Africa/El_Aaiun";
+      case TIMEZONE_AFRICA_JOHANNESBURG:
+         return "Africa/Johannesburg";
+      case TIMEZONE_AFRICA_JUBA:
+         return "Africa/Juba";
+      case TIMEZONE_AFRICA_KHARTOUM:
+         return "Africa/Khartoum";
+      case TIMEZONE_AFRICA_LAGOS:
+         return "Africa/Lagos";
+      case TIMEZONE_AFRICA_MAPUTO:
+         return "Africa/Maputo";
+      case TIMEZONE_AFRICA_MONROVIA:
+         return "Africa/Monrovia";
+      case TIMEZONE_AFRICA_NAIROBI:
+         return "Africa/Nairobi";
+      case TIMEZONE_AFRICA_NDJAMENA:
+         return "Africa/Ndjamena";
+      case TIMEZONE_AFRICA_SAO_TOME:
+         return "Africa/Sao_Tome";
+      case TIMEZONE_AFRICA_TRIPOLI:
+         return "Africa/Tripoli";
+      case TIMEZONE_AFRICA_TUNIS:
+         return "Africa/Tunis";
+      case TIMEZONE_AFRICA_WINDHOEK:
+         return "Africa/Windhoek";
+      case TIMEZONE_AMERICA_ADAK:
+         return "America/Adak";
+      case TIMEZONE_AMERICA_ANCHORAGE:
+         return "America/Anchorage";
+      case TIMEZONE_AMERICA_ARAGUAINA:
+         return "America/Araguaina";
+      case TIMEZONE_AMERICA_ARGENTINA:
+         return "America/Argentina/Buenos_Aires";
+      case TIMEZONE_AMERICA_ARGENTINA:
+         return "America/Argentina/Catamarca";
+      case TIMEZONE_AMERICA_ARGENTINA:
+         return "America/Argentina/Cordoba";
+      case TIMEZONE_AMERICA_ARGENTINA:
+         return "America/Argentina/Jujuy";
+      case TIMEZONE_AMERICA_ARGENTINA:
+         return "America/Argentina/La_Rioja";
+      case TIMEZONE_AMERICA_ARGENTINA:
+         return "America/Argentina/Mendoza";
+      case TIMEZONE_AMERICA_ARGENTINA:
+         return "America/Argentina/Rio_Gallegos";
+      case TIMEZONE_AMERICA_ARGENTINA:
+         return "America/Argentina/Salta";
+      case TIMEZONE_AMERICA_ARGENTINA:
+         return "America/Argentina/San_Juan";
+      case TIMEZONE_AMERICA_ARGENTINA:
+         return "America/Argentina/San_Luis";
+      case TIMEZONE_AMERICA_ARGENTINA:
+         return "America/Argentina/Tucuman";
+      case TIMEZONE_AMERICA_ARGENTINA:
+         return "America/Argentina/Ushuaia";
+      case TIMEZONE_AMERICA_ASUNCION:
+         return "America/Asuncion";
+      case TIMEZONE_AMERICA_ATIKOKAN:
+         return "America/Atikokan";
+      case TIMEZONE_AMERICA_BAHIA:
+         return "America/Bahia";
+      case TIMEZONE_AMERICA_BAHIA_BANDERAS:
+         return "America/Bahia_Banderas";
+      case TIMEZONE_AMERICA_BARBADOS:
+         return "America/Barbados";
+      case TIMEZONE_AMERICA_BELEM:
+         return "America/Belem";
+      case TIMEZONE_AMERICA_BELIZE:
+         return "America/Belize";
+      case TIMEZONE_AMERICA_BLANC_SABLON:
+         return "America/Blanc-Sablon";
+      case TIMEZONE_AMERICA_BOA_VISTA:
+         return "America/Boa_Vista";
+      case TIMEZONE_AMERICA_BOGOTA:
+         return "America/Bogota";
+      case TIMEZONE_AMERICA_BOISE:
+         return "America/Boise";
+      case TIMEZONE_AMERICA_CAMBRIDGE_BAY:
+         return "America/Cambridge_Bay";
+      case TIMEZONE_AMERICA_CAMPO_GRANDE:
+         return "America/Campo_Grande";
+      case TIMEZONE_AMERICA_CANCUN:
+         return "America/Cancun";
+      case TIMEZONE_AMERICA_CARACAS:
+         return "America/Caracas";
+      case TIMEZONE_AMERICA_CAYENNE:
+         return "America/Cayenne";
+      case TIMEZONE_AMERICA_CHICAGO:
+         return "America/Chicago";
+      case TIMEZONE_AMERICA_CHIHUAHUA:
+         return "America/Chihuahua";
+      case TIMEZONE_AMERICA_COSTA_RICA:
+         return "America/Costa_Rica";
+      case TIMEZONE_AMERICA_CRESTON:
+         return "America/Creston";
+      case TIMEZONE_AMERICA_CUIABA:
+         return "America/Cuiaba";
+      case TIMEZONE_AMERICA_CURACAO:
+         return "America/Curacao";
+      case TIMEZONE_AMERICA_DANMARKSHAVN:
+         return "America/Danmarkshavn";
+      case TIMEZONE_AMERICA_DAWSON:
+         return "America/Dawson";
+      case TIMEZONE_AMERICA_DAWSON_CREEK:
+         return "America/Dawson_Creek";
+      case TIMEZONE_AMERICA_DENVER:
+         return "America/Denver";
+      case TIMEZONE_AMERICA_DETROIT:
+         return "America/Detroit";
+      case TIMEZONE_AMERICA_EDMONTON:
+         return "America/Edmonton";
+      case TIMEZONE_AMERICA_EIRUNEPE:
+         return "America/Eirunepe";
+      case TIMEZONE_AMERICA_EL_SALVADOR:
+         return "America/El_Salvador";
+      case TIMEZONE_AMERICA_FORT_NELSON:
+         return "America/Fort_Nelson";
+      case TIMEZONE_AMERICA_FORTALEZA:
+         return "America/Fortaleza";
+      case TIMEZONE_AMERICA_GLACE_BAY:
+         return "America/Glace_Bay";
+      case TIMEZONE_AMERICA_GOOSE_BAY:
+         return "America/Goose_Bay";
+      case TIMEZONE_AMERICA_GRAND_TURK:
+         return "America/Grand_Turk";
+      case TIMEZONE_AMERICA_GUATEMALA:
+         return "America/Guatemala";
+      case TIMEZONE_AMERICA_GUAYAQUIL:
+         return "America/Guayaquil";
+      case TIMEZONE_AMERICA_GUYANA:
+         return "America/Guyana";
+      case TIMEZONE_AMERICA_HALIFAX:
+         return "America/Halifax";
+      case TIMEZONE_AMERICA_HAVANA:
+         return "America/Havana";
+      case TIMEZONE_AMERICA_HERMOSILLO:
+         return "America/Hermosillo";
+      case TIMEZONE_AMERICA_INDIANA:
+         return "America/Indiana/Indianapolis";
+      case TIMEZONE_AMERICA_INDIANA:
+         return "America/Indiana/Knox";
+      case TIMEZONE_AMERICA_INDIANA:
+         return "America/Indiana/Marengo";
+      case TIMEZONE_AMERICA_INDIANA:
+         return "America/Indiana/Petersburg";
+      case TIMEZONE_AMERICA_INDIANA:
+         return "America/Indiana/Tell_City";
+      case TIMEZONE_AMERICA_INDIANA:
+         return "America/Indiana/Vevay";
+      case TIMEZONE_AMERICA_INDIANA:
+         return "America/Indiana/Vincennes";
+      case TIMEZONE_AMERICA_INDIANA:
+         return "America/Indiana/Winamac";
+      case TIMEZONE_AMERICA_INUVIK:
+         return "America/Inuvik";
+      case TIMEZONE_AMERICA_IQALUIT:
+         return "America/Iqaluit";
+      case TIMEZONE_AMERICA_JAMAICA:
+         return "America/Jamaica";
+      case TIMEZONE_AMERICA_JUNEAU:
+         return "America/Juneau";
+      case TIMEZONE_AMERICA_KENTUCKY:
+         return "America/Kentucky/Louisville";
+      case TIMEZONE_AMERICA_KENTUCKY:
+         return "America/Kentucky/Monticello";
+      case TIMEZONE_AMERICA_LA_PAZ:
+         return "America/La_Paz";
+      case TIMEZONE_AMERICA_LIMA:
+         return "America/Lima";
+      case TIMEZONE_AMERICA_LOS_ANGELES:
+         return "America/Los_Angeles";
+      case TIMEZONE_AMERICA_MACEIO:
+         return "America/Maceio";
+      case TIMEZONE_AMERICA_MANAGUA:
+         return "America/Managua";
+      case TIMEZONE_AMERICA_MANAUS:
+         return "America/Manaus";
+      case TIMEZONE_AMERICA_MARTINIQUE:
+         return "America/Martinique";
+      case TIMEZONE_AMERICA_MATAMOROS:
+         return "America/Matamoros";
+      case TIMEZONE_AMERICA_MAZATLAN:
+         return "America/Mazatlan";
+      case TIMEZONE_AMERICA_MENOMINEE:
+         return "America/Menominee";
+      case TIMEZONE_AMERICA_MERIDA:
+         return "America/Merida";
+      case TIMEZONE_AMERICA_METLAKATLA:
+         return "America/Metlakatla";
+      case TIMEZONE_AMERICA_MEXICO_CITY:
+         return "America/Mexico_City";
+      case TIMEZONE_AMERICA_MIQUELON:
+         return "America/Miquelon";
+      case TIMEZONE_AMERICA_MONCTON:
+         return "America/Moncton";
+      case TIMEZONE_AMERICA_MONTERREY:
+         return "America/Monterrey";
+      case TIMEZONE_AMERICA_MONTEVIDEO:
+         return "America/Montevideo";
+      case TIMEZONE_AMERICA_NASSAU:
+         return "America/Nassau";
+      case TIMEZONE_AMERICA_NEW_YORK:
+         return "America/New_York";
+      case TIMEZONE_AMERICA_NIPIGON:
+         return "America/Nipigon";
+      case TIMEZONE_AMERICA_NOME:
+         return "America/Nome";
+      case TIMEZONE_AMERICA_NORONHA:
+         return "America/Noronha";
+      case TIMEZONE_AMERICA_NORTH_DAKOTA:
+         return "America/North_Dakota/Beulah";
+      case TIMEZONE_AMERICA_NORTH_DAKOTA:
+         return "America/North_Dakota/Center";
+      case TIMEZONE_AMERICA_NORTH_DAKOTA:
+         return "America/North_Dakota/New_Salem";
+      case TIMEZONE_AMERICA_NUUK:
+         return "America/Nuuk";
+      case TIMEZONE_AMERICA_OJINAGA:
+         return "America/Ojinaga";
+      case TIMEZONE_AMERICA_PANAMA:
+         return "America/Panama";
+      case TIMEZONE_AMERICA_PANGNIRTUNG:
+         return "America/Pangnirtung";
+      case TIMEZONE_AMERICA_PARAMARIBO:
+         return "America/Paramaribo";
+      case TIMEZONE_AMERICA_PHOENIX:
+         return "America/Phoenix";
+      case TIMEZONE_AMERICA_PORT_AU_PRINCE:
+         return "America/Port-au-Prince";
+      case TIMEZONE_AMERICA_PORT_OF_SPAIN:
+         return "America/Port_of_Spain";
+      case TIMEZONE_AMERICA_PORTO_VELHO:
+         return "America/Porto_Velho";
+      case TIMEZONE_AMERICA_PUERTO_RICO:
+         return "America/Puerto_Rico";
+      case TIMEZONE_AMERICA_PUNTA_ARENAS:
+         return "America/Punta_Arenas";
+      case TIMEZONE_AMERICA_RAINY_RIVER:
+         return "America/Rainy_River";
+      case TIMEZONE_AMERICA_RANKIN_INLET:
+         return "America/Rankin_Inlet";
+      case TIMEZONE_AMERICA_RECIFE:
+         return "America/Recife";
+      case TIMEZONE_AMERICA_REGINA:
+         return "America/Regina";
+      case TIMEZONE_AMERICA_RESOLUTE:
+         return "America/Resolute";
+      case TIMEZONE_AMERICA_RIO_BRANCO:
+         return "America/Rio_Branco";
+      case TIMEZONE_AMERICA_SANTAREM:
+         return "America/Santarem";
+      case TIMEZONE_AMERICA_SANTIAGO:
+         return "America/Santiago";
+      case TIMEZONE_AMERICA_SANTO_DOMINGO:
+         return "America/Santo_Domingo";
+      case TIMEZONE_AMERICA_SAO_PAULO:
+         return "America/Sao_Paulo";
+      case TIMEZONE_AMERICA_SCORESBYSUND:
+         return "America/Scoresbysund";
+      case TIMEZONE_AMERICA_SITKA:
+         return "America/Sitka";
+      case TIMEZONE_AMERICA_ST_JOHNS:
+         return "America/St_Johns";
+      case TIMEZONE_AMERICA_SWIFT_CURRENT:
+         return "America/Swift_Current";
+      case TIMEZONE_AMERICA_TEGUCIGALPA:
+         return "America/Tegucigalpa";
+      case TIMEZONE_AMERICA_THULE:
+         return "America/Thule";
+      case TIMEZONE_AMERICA_THUNDER_BAY:
+         return "America/Thunder_Bay";
+      case TIMEZONE_AMERICA_TIJUANA:
+         return "America/Tijuana";
+      case TIMEZONE_AMERICA_TORONTO:
+         return "America/Toronto";
+      case TIMEZONE_AMERICA_VANCOUVER:
+         return "America/Vancouver";
+      case TIMEZONE_AMERICA_WHITEHORSE:
+         return "America/Whitehorse";
+      case TIMEZONE_AMERICA_WINNIPEG:
+         return "America/Winnipeg";
+      case TIMEZONE_AMERICA_YAKUTAT:
+         return "America/Yakutat";
+      case TIMEZONE_AMERICA_YELLOWKNIFE:
+         return "America/Yellowknife";
+      case TIMEZONE_ANTARCTICA_CASEY:
+         return "Antarctica/Casey";
+      case TIMEZONE_ANTARCTICA_DAVIS:
+         return "Antarctica/Davis";
+      case TIMEZONE_ANTARCTICA_DUMONTDURVILLE:
+         return "Antarctica/DumontDUrville";
+      case TIMEZONE_ANTARCTICA_MACQUARIE:
+         return "Antarctica/Macquarie";
+      case TIMEZONE_ANTARCTICA_MAWSON:
+         return "Antarctica/Mawson";
+      case TIMEZONE_ANTARCTICA_PALMER:
+         return "Antarctica/Palmer";
+      case TIMEZONE_ANTARCTICA_ROTHERA:
+         return "Antarctica/Rothera";
+      case TIMEZONE_ANTARCTICA_SYOWA:
+         return "Antarctica/Syowa";
+      case TIMEZONE_ANTARCTICA_TROLL:
+         return "Antarctica/Troll";
+      case TIMEZONE_ANTARCTICA_VOSTOK:
+         return "Antarctica/Vostok";
+      case TIMEZONE_ASIA_ALMATY:
+         return "Asia/Almaty";
+      case TIMEZONE_ASIA_AMMAN:
+         return "Asia/Amman";
+      case TIMEZONE_ASIA_ANADYR:
+         return "Asia/Anadyr";
+      case TIMEZONE_ASIA_AQTAU:
+         return "Asia/Aqtau";
+      case TIMEZONE_ASIA_AQTOBE:
+         return "Asia/Aqtobe";
+      case TIMEZONE_ASIA_ASHGABAT:
+         return "Asia/Ashgabat";
+      case TIMEZONE_ASIA_ATYRAU:
+         return "Asia/Atyrau";
+      case TIMEZONE_ASIA_BAGHDAD:
+         return "Asia/Baghdad";
+      case TIMEZONE_ASIA_BAKU:
+         return "Asia/Baku";
+      case TIMEZONE_ASIA_BANGKOK:
+         return "Asia/Bangkok";
+      case TIMEZONE_ASIA_BARNAUL:
+         return "Asia/Barnaul";
+      case TIMEZONE_ASIA_BEIRUT:
+         return "Asia/Beirut";
+      case TIMEZONE_ASIA_BISHKEK:
+         return "Asia/Bishkek";
+      case TIMEZONE_ASIA_BRUNEI:
+         return "Asia/Brunei";
+      case TIMEZONE_ASIA_CHITA:
+         return "Asia/Chita";
+      case TIMEZONE_ASIA_CHOIBALSAN:
+         return "Asia/Choibalsan";
+      case TIMEZONE_ASIA_COLOMBO:
+         return "Asia/Colombo";
+      case TIMEZONE_ASIA_DAMASCUS:
+         return "Asia/Damascus";
+      case TIMEZONE_ASIA_DHAKA:
+         return "Asia/Dhaka";
+      case TIMEZONE_ASIA_DILI:
+         return "Asia/Dili";
+      case TIMEZONE_ASIA_DUBAI:
+         return "Asia/Dubai";
+      case TIMEZONE_ASIA_DUSHANBE:
+         return "Asia/Dushanbe";
+      case TIMEZONE_ASIA_FAMAGUSTA:
+         return "Asia/Famagusta";
+      case TIMEZONE_ASIA_GAZA:
+         return "Asia/Gaza";
+      case TIMEZONE_ASIA_HEBRON:
+         return "Asia/Hebron";
+      case TIMEZONE_ASIA_HO_CHI_MINH:
+         return "Asia/Ho_Chi_Minh";
+      case TIMEZONE_ASIA_HONG_KONG:
+         return "Asia/Hong_Kong";
+      case TIMEZONE_ASIA_HOVD:
+         return "Asia/Hovd";
+      case TIMEZONE_ASIA_IRKUTSK:
+         return "Asia/Irkutsk";
+      case TIMEZONE_ASIA_JAKARTA:
+         return "Asia/Jakarta";
+      case TIMEZONE_ASIA_JAYAPURA:
+         return "Asia/Jayapura";
+      case TIMEZONE_ASIA_JERUSALEM:
+         return "Asia/Jerusalem";
+      case TIMEZONE_ASIA_KABUL:
+         return "Asia/Kabul";
+      case TIMEZONE_ASIA_KAMCHATKA:
+         return "Asia/Kamchatka";
+      case TIMEZONE_ASIA_KARACHI:
+         return "Asia/Karachi";
+      case TIMEZONE_ASIA_KATHMANDU:
+         return "Asia/Kathmandu";
+      case TIMEZONE_ASIA_KHANDYGA:
+         return "Asia/Khandyga";
+      case TIMEZONE_ASIA_KOLKATA:
+         return "Asia/Kolkata";
+      case TIMEZONE_ASIA_KRASNOYARSK:
+         return "Asia/Krasnoyarsk";
+      case TIMEZONE_ASIA_KUALA_LUMPUR:
+         return "Asia/Kuala_Lumpur";
+      case TIMEZONE_ASIA_KUCHING:
+         return "Asia/Kuching";
+      case TIMEZONE_ASIA_MACAU:
+         return "Asia/Macau";
+      case TIMEZONE_ASIA_MAGADAN:
+         return "Asia/Magadan";
+      case TIMEZONE_ASIA_MAKASSAR:
+         return "Asia/Makassar";
+      case TIMEZONE_ASIA_MANILA:
+         return "Asia/Manila";
+      case TIMEZONE_ASIA_NICOSIA:
+         return "Asia/Nicosia";
+      case TIMEZONE_ASIA_NOVOKUZNETSK:
+         return "Asia/Novokuznetsk";
+      case TIMEZONE_ASIA_NOVOSIBIRSK:
+         return "Asia/Novosibirsk";
+      case TIMEZONE_ASIA_OMSK:
+         return "Asia/Omsk";
+      case TIMEZONE_ASIA_ORAL:
+         return "Asia/Oral";
+      case TIMEZONE_ASIA_PONTIANAK:
+         return "Asia/Pontianak";
+      case TIMEZONE_ASIA_PYONGYANG:
+         return "Asia/Pyongyang";
+      case TIMEZONE_ASIA_QATAR:
+         return "Asia/Qatar";
+      case TIMEZONE_ASIA_QOSTANAY:
+         return "Asia/Qostanay";
+      case TIMEZONE_ASIA_QYZYLORDA:
+         return "Asia/Qyzylorda";
+      case TIMEZONE_ASIA_RIYADH:
+         return "Asia/Riyadh";
+      case TIMEZONE_ASIA_SAKHALIN:
+         return "Asia/Sakhalin";
+      case TIMEZONE_ASIA_SAMARKAND:
+         return "Asia/Samarkand";
+      case TIMEZONE_ASIA_SEOUL:
+         return "Asia/Seoul";
+      case TIMEZONE_ASIA_SHANGHAI:
+         return "Asia/Shanghai";
+      case TIMEZONE_ASIA_SINGAPORE:
+         return "Asia/Singapore";
+      case TIMEZONE_ASIA_SREDNEKOLYMSK:
+         return "Asia/Srednekolymsk";
+      case TIMEZONE_ASIA_TAIPEI:
+         return "Asia/Taipei";
+      case TIMEZONE_ASIA_TASHKENT:
+         return "Asia/Tashkent";
+      case TIMEZONE_ASIA_TBILISI:
+         return "Asia/Tbilisi";
+      case TIMEZONE_ASIA_TEHRAN:
+         return "Asia/Tehran";
+      case TIMEZONE_ASIA_THIMPHU:
+         return "Asia/Thimphu";
+      case TIMEZONE_ASIA_TOKYO:
+         return "Asia/Tokyo";
+      case TIMEZONE_ASIA_TOMSK:
+         return "Asia/Tomsk";
+      case TIMEZONE_ASIA_ULAANBAATAR:
+         return "Asia/Ulaanbaatar";
+      case TIMEZONE_ASIA_URUMQI:
+         return "Asia/Urumqi";
+      case TIMEZONE_ASIA_UST_NERA:
+         return "Asia/Ust-Nera";
+      case TIMEZONE_ASIA_VLADIVOSTOK:
+         return "Asia/Vladivostok";
+      case TIMEZONE_ASIA_YAKUTSK:
+         return "Asia/Yakutsk";
+      case TIMEZONE_ASIA_YANGON:
+         return "Asia/Yangon";
+      case TIMEZONE_ASIA_YEKATERINBURG:
+         return "Asia/Yekaterinburg";
+      case TIMEZONE_ASIA_YEREVAN:
+         return "Asia/Yerevan";
+      case TIMEZONE_ATLANTIC_AZORES:
+         return "Atlantic/Azores";
+      case TIMEZONE_ATLANTIC_BERMUDA:
+         return "Atlantic/Bermuda";
+      case TIMEZONE_ATLANTIC_CANARY:
+         return "Atlantic/Canary";
+      case TIMEZONE_ATLANTIC_CAPE_VERDE:
+         return "Atlantic/Cape_Verde";
+      case TIMEZONE_ATLANTIC_FAROE:
+         return "Atlantic/Faroe";
+      case TIMEZONE_ATLANTIC_MADEIRA:
+         return "Atlantic/Madeira";
+      case TIMEZONE_ATLANTIC_REYKJAVIK:
+         return "Atlantic/Reykjavik";
+      case TIMEZONE_ATLANTIC_SOUTH_GEORGIA:
+         return "Atlantic/South_Georgia";
+      case TIMEZONE_ATLANTIC_STANLEY:
+         return "Atlantic/Stanley";
+      case TIMEZONE_AUSTRALIA_ADELAIDE:
+         return "Australia/Adelaide";
+      case TIMEZONE_AUSTRALIA_BRISBANE:
+         return "Australia/Brisbane";
+      case TIMEZONE_AUSTRALIA_BROKEN_HILL:
+         return "Australia/Broken_Hill";
+      case TIMEZONE_AUSTRALIA_CURRIE:
+         return "Australia/Currie";
+      case TIMEZONE_AUSTRALIA_DARWIN:
+         return "Australia/Darwin";
+      case TIMEZONE_AUSTRALIA_EUCLA:
+         return "Australia/Eucla";
+      case TIMEZONE_AUSTRALIA_HOBART:
+         return "Australia/Hobart";
+      case TIMEZONE_AUSTRALIA_LINDEMAN:
+         return "Australia/Lindeman";
+      case TIMEZONE_AUSTRALIA_LORD_HOWE:
+         return "Australia/Lord_Howe";
+      case TIMEZONE_AUSTRALIA_MELBOURNE:
+         return "Australia/Melbourne";
+      case TIMEZONE_AUSTRALIA_PERTH:
+         return "Australia/Perth";
+      case TIMEZONE_AUSTRALIA_SYDNEY:
+         return "Australia/Sydney";
+      case TIMEZONE_EUROPE_AMSTERDAM:
+         return "Europe/Amsterdam";
+      case TIMEZONE_EUROPE_ANDORRA:
+         return "Europe/Andorra";
+      case TIMEZONE_EUROPE_ASTRAKHAN:
+         return "Europe/Astrakhan";
+      case TIMEZONE_EUROPE_ATHENS:
+         return "Europe/Athens";
+      case TIMEZONE_EUROPE_BELGRADE:
+         return "Europe/Belgrade";
+      case TIMEZONE_EUROPE_BERLIN:
+         return "Europe/Berlin";
+      case TIMEZONE_EUROPE_BRUSSELS:
+         return "Europe/Brussels";
+      case TIMEZONE_EUROPE_BUCHAREST:
+         return "Europe/Bucharest";
+      case TIMEZONE_EUROPE_BUDAPEST:
+         return "Europe/Budapest";
+      case TIMEZONE_EUROPE_CHISINAU:
+         return "Europe/Chisinau";
+      case TIMEZONE_EUROPE_COPENHAGEN:
+         return "Europe/Copenhagen";
+      case TIMEZONE_EUROPE_DUBLIN:
+         return "Europe/Dublin";
+      case TIMEZONE_EUROPE_GIBRALTAR:
+         return "Europe/Gibraltar";
+      case TIMEZONE_EUROPE_HELSINKI:
+         return "Europe/Helsinki";
+      case TIMEZONE_EUROPE_ISTANBUL:
+         return "Europe/Istanbul";
+      case TIMEZONE_EUROPE_KALININGRAD:
+         return "Europe/Kaliningrad";
+      case TIMEZONE_EUROPE_KIEV:
+         return "Europe/Kiev";
+      case TIMEZONE_EUROPE_KIROV:
+         return "Europe/Kirov";
+      case TIMEZONE_EUROPE_LISBON:
+         return "Europe/Lisbon";
+      case TIMEZONE_EUROPE_LONDON:
+         return "Europe/London";
+      case TIMEZONE_EUROPE_LUXEMBOURG:
+         return "Europe/Luxembourg";
+      case TIMEZONE_EUROPE_MADRID:
+         return "Europe/Madrid";
+      case TIMEZONE_EUROPE_MALTA:
+         return "Europe/Malta";
+      case TIMEZONE_EUROPE_MINSK:
+         return "Europe/Minsk";
+      case TIMEZONE_EUROPE_MONACO:
+         return "Europe/Monaco";
+      case TIMEZONE_EUROPE_MOSCOW:
+         return "Europe/Moscow";
+      case TIMEZONE_EUROPE_OSLO:
+         return "Europe/Oslo";
+      case TIMEZONE_EUROPE_PARIS:
+         return "Europe/Paris";
+      case TIMEZONE_EUROPE_PRAGUE:
+         return "Europe/Prague";
+      case TIMEZONE_EUROPE_RIGA:
+         return "Europe/Riga";
+      case TIMEZONE_EUROPE_ROME:
+         return "Europe/Rome";
+      case TIMEZONE_EUROPE_SAMARA:
+         return "Europe/Samara";
+      case TIMEZONE_EUROPE_SARATOV:
+         return "Europe/Saratov";
+      case TIMEZONE_EUROPE_SIMFEROPOL:
+         return "Europe/Simferopol";
+      case TIMEZONE_EUROPE_SOFIA:
+         return "Europe/Sofia";
+      case TIMEZONE_EUROPE_STOCKHOLM:
+         return "Europe/Stockholm";
+      case TIMEZONE_EUROPE_TALLINN:
+         return "Europe/Tallinn";
+      case TIMEZONE_EUROPE_TIRANE:
+         return "Europe/Tirane";
+      case TIMEZONE_EUROPE_ULYANOVSK:
+         return "Europe/Ulyanovsk";
+      case TIMEZONE_EUROPE_UZHGOROD:
+         return "Europe/Uzhgorod";
+      case TIMEZONE_EUROPE_VIENNA:
+         return "Europe/Vienna";
+      case TIMEZONE_EUROPE_VILNIUS:
+         return "Europe/Vilnius";
+      case TIMEZONE_EUROPE_VOLGOGRAD:
+         return "Europe/Volgograd";
+      case TIMEZONE_EUROPE_WARSAW:
+         return "Europe/Warsaw";
+      case TIMEZONE_EUROPE_ZAPOROZHYE:
+         return "Europe/Zaporozhye";
+      case TIMEZONE_EUROPE_ZURICH:
+         return "Europe/Zurich";
+      case TIMEZONE_INDIAN_CHAGOS:
+         return "Indian/Chagos";
+      case TIMEZONE_INDIAN_CHRISTMAS:
+         return "Indian/Christmas";
+      case TIMEZONE_INDIAN_COCOS:
+         return "Indian/Cocos";
+      case TIMEZONE_INDIAN_KERGUELEN:
+         return "Indian/Kerguelen";
+      case TIMEZONE_INDIAN_MAHE:
+         return "Indian/Mahe";
+      case TIMEZONE_INDIAN_MALDIVES:
+         return "Indian/Maldives";
+      case TIMEZONE_INDIAN_MAURITIUS:
+         return "Indian/Mauritius";
+      case TIMEZONE_INDIAN_REUNION:
+         return "Indian/Reunion";
+      case TIMEZONE_PACIFIC_APIA:
+         return "Pacific/Apia";
+      case TIMEZONE_PACIFIC_AUCKLAND:
+         return "Pacific/Auckland";
+      case TIMEZONE_PACIFIC_BOUGAINVILLE:
+         return "Pacific/Bougainville";
+      case TIMEZONE_PACIFIC_CHATHAM:
+         return "Pacific/Chatham";
+      case TIMEZONE_PACIFIC_CHUUK:
+         return "Pacific/Chuuk";
+      case TIMEZONE_PACIFIC_EASTER:
+         return "Pacific/Easter";
+      case TIMEZONE_PACIFIC_EFATE:
+         return "Pacific/Efate";
+      case TIMEZONE_PACIFIC_ENDERBURY:
+         return "Pacific/Enderbury";
+      case TIMEZONE_PACIFIC_FAKAOFO:
+         return "Pacific/Fakaofo";
+      case TIMEZONE_PACIFIC_FIJI:
+         return "Pacific/Fiji";
+      case TIMEZONE_PACIFIC_FUNAFUTI:
+         return "Pacific/Funafuti";
+      case TIMEZONE_PACIFIC_GALAPAGOS:
+         return "Pacific/Galapagos";
+      case TIMEZONE_PACIFIC_GAMBIER:
+         return "Pacific/Gambier";
+      case TIMEZONE_PACIFIC_GUADALCANAL:
+         return "Pacific/Guadalcanal";
+      case TIMEZONE_PACIFIC_GUAM:
+         return "Pacific/Guam";
+      case TIMEZONE_PACIFIC_HONOLULU:
+         return "Pacific/Honolulu";
+      case TIMEZONE_PACIFIC_KIRITIMATI:
+         return "Pacific/Kiritimati";
+      case TIMEZONE_PACIFIC_KOSRAE:
+         return "Pacific/Kosrae";
+      case TIMEZONE_PACIFIC_KWAJALEIN:
+         return "Pacific/Kwajalein";
+      case TIMEZONE_PACIFIC_MAJURO:
+         return "Pacific/Majuro";
+      case TIMEZONE_PACIFIC_MARQUESAS:
+         return "Pacific/Marquesas";
+      case TIMEZONE_PACIFIC_NAURU:
+         return "Pacific/Nauru";
+      case TIMEZONE_PACIFIC_NIUE:
+         return "Pacific/Niue";
+      case TIMEZONE_PACIFIC_NORFOLK:
+         return "Pacific/Norfolk";
+      case TIMEZONE_PACIFIC_NOUMEA:
+         return "Pacific/Noumea";
+      case TIMEZONE_PACIFIC_PAGO_PAGO:
+         return "Pacific/Pago_Pago";
+      case TIMEZONE_PACIFIC_PALAU:
+         return "Pacific/Palau";
+      case TIMEZONE_PACIFIC_PITCAIRN:
+         return "Pacific/Pitcairn";
+      case TIMEZONE_PACIFIC_POHNPEI:
+         return "Pacific/Pohnpei";
+      case TIMEZONE_PACIFIC_PORT_MORESBY:
+         return "Pacific/Port_Moresby";
+      case TIMEZONE_PACIFIC_RAROTONGA:
+         return "Pacific/Rarotonga";
+      case TIMEZONE_PACIFIC_TAHITI:
+         return "Pacific/Tahiti";
+      case TIMEZONE_PACIFIC_TARAWA:
+         return "Pacific/Tarawa";
+      case TIMEZONE_PACIFIC_TONGATAPU:
+         return "Pacific/Tongatapu";
+      case TIMEZONE_PACIFIC_WAKE:
+         return "Pacific/Wake";
+      case TIMEZONE_PACIFIC_WALLIS:
+         return "Pacific/Wallis";
+      case TIMEZONE_UTC:
+         break;
+   }
+**/
+
+   return "UTC";
+}
+
+/**
  * config_get_default_video:
  *
  * Gets default video driver.
@@ -1141,6 +2212,9 @@ static struct config_array_setting *populate_settings_array(settings_t *settings
       return NULL;
 
    /* Arrays */
+#ifdef HAVE_LAKKA
+   SETTING_ARRAY("timezone",                 settings->arrays.timezone,       false, NULL, true);
+#endif
    SETTING_ARRAY("video_driver",             settings->arrays.video_driver,   false, NULL, true);
    SETTING_ARRAY("record_driver",            settings->arrays.record_driver,  false, NULL, true);
    SETTING_ARRAY("camera_driver",            settings->arrays.camera_driver,  false, NULL, true);
@@ -1475,6 +2549,9 @@ static struct config_bool_setting *populate_settings_bool(
    SETTING_BOOL("settings_show_audio",      &settings->bools.settings_show_audio, true, DEFAULT_SETTINGS_SHOW_AUDIO, false);
    SETTING_BOOL("settings_show_input",      &settings->bools.settings_show_input, true, DEFAULT_SETTINGS_SHOW_INPUT, false);
    SETTING_BOOL("settings_show_latency",      &settings->bools.settings_show_latency, true, DEFAULT_SETTINGS_SHOW_LATENCY, false);
+#ifdef HAVE_LAKKA
+   SETTING_BOOL("settings_show_timezone",      &settings->bools.settings_show_timezone, true, DEFAULT_SETTINGS_SHOW_TIMEZONE, false);
+#endif
    SETTING_BOOL("settings_show_core",      &settings->bools.settings_show_core, true, DEFAULT_SETTINGS_SHOW_CORE, false);
    SETTING_BOOL("settings_show_configuration",      &settings->bools.settings_show_configuration, true, DEFAULT_SETTINGS_SHOW_CONFIGURATION, false);
    SETTING_BOOL("settings_show_saving",      &settings->bools.settings_show_saving, true, DEFAULT_SETTINGS_SHOW_SAVING, false);
@@ -1540,6 +2617,9 @@ static struct config_bool_setting *populate_settings_bool(
    SETTING_BOOL("menu_show_information",         &settings->bools.menu_show_information, true, menu_show_information, false);
    SETTING_BOOL("menu_show_configurations",      &settings->bools.menu_show_configurations, true, menu_show_configurations, false);
    SETTING_BOOL("menu_show_latency",      &settings->bools.menu_show_latency, true, true, false);
+#ifdef HAVE_LAKKA
+   SETTING_BOOL("menu_show_timezone",     &settings->bools.menu_show_timezone, true, true, false);
+#endif
    SETTING_BOOL("menu_show_rewind",      &settings->bools.menu_show_rewind, true, true, false);
    SETTING_BOOL("menu_show_overlays",      &settings->bools.menu_show_overlays, true, true, false);
 #ifdef HAVE_VIDEO_LAYOUT
@@ -1990,6 +3070,9 @@ void config_set_defaults(void *data)
    int int_settings_size           = sizeof(settings->ints)    / sizeof(settings->ints.placeholder);
    int uint_settings_size          = sizeof(settings->uints)   / sizeof(settings->uints.placeholder);
    int size_settings_size          = sizeof(settings->sizes)   / sizeof(settings->sizes.placeholder);
+#ifdef HAVE_LAKKA
+   const char *def_timezone        = timezone_load_settings();
+#endif
    const char *def_video           = config_get_default_video();
    const char *def_audio           = config_get_default_audio();
    const char *def_audio_resampler = config_get_default_audio_resampler();
@@ -2066,6 +3149,10 @@ void config_set_defaults(void *data)
       free(float_settings);
    }
 
+   if (def_timezone)
+      configuration_set_string(settings,
+            settings->arrays.timezone,
+            def_timezone);
    if (def_camera)
       configuration_set_string(settings,
             settings->arrays.camera_driver,
@@ -2217,6 +3304,10 @@ void config_set_defaults(void *data)
          DEFAULT_BUILDBOT_ASSETS_SERVER_URL);
 
    *settings->arrays.input_keyboard_layout                = '\0';
+
+#ifdef HAVE_LAKKA
+   *settings->arrays.timezone = '\0';
+#endif
 
    for (i = 0; i < MAX_USERS; i++)
    {

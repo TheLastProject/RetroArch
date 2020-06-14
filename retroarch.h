@@ -1557,6 +1557,12 @@ void video_driver_set_video_cache_context_ack(void);
 
 bool video_driver_get_viewport_info(struct video_viewport *viewport);
 
+#ifdef HAVE_LAKKA
+char* timezone_load_setting(void);
+
+void timezone_save_settings(char *timezone);
+#endif
+
 /**
  * config_get_video_driver_options:
  *
